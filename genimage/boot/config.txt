@@ -1,0 +1,5 @@
+mode=1
+bin=rt-smart
+kernel=rvboards_boot.img
+dtoverlay=test-overlay
+mmc_root=/dev/mmcblk0p5

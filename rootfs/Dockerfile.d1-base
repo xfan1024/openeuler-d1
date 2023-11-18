@@ -1,0 +1,8 @@
+FROM xfan1024/openeuler:22.03-riscv64
+RUN dnf install -y iputils iproute wget curl vim nano NetworkManager \
+    util-linux findutils passwd shadow hostname \
+    sudo openssh-server openssh-clients htop tmux gdisk parted \
+    systemd systemd-resolved systemd-udev \
+    && dnf clean all \
+    && echo 'root:openEuler12#$' | chpasswd \
+    && systemctl enable systemd-resolved
